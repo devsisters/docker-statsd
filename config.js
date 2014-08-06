@@ -1,5 +1,8 @@
 {
-  "debug": true,
-  "debugInterval": 5000,
-  "port": 8125
+  "graphitePort": parseInt(process.env.STATSD_GRAPHITE_PORT || "2003"),
+  "graphiteHost": process.env.STATSD_GRAPHITE_HOST || "localhost",
+  "port": 8125,
+  "graphite": {
+    "legacyNamespace": false
+  }
 }
